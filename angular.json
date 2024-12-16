@@ -39,7 +39,10 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeflex/primeflex.min.css",
+              "node_modules/primeflex/themes/primeone-light.scss",
+              "node_modules/primeicons/primeicons.css"
             ],
             "scripts": []
           },
