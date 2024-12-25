@@ -1,0 +1,28 @@
+<!-- <div class="carousel-container" (mouseover)="stopCarousel()" (mouseout)="startCarousel()">
+  <div class="carousel-wrapper" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+    [style.transition]="isAnimating ? 'transform 0.5s ease-in-out' : 'none'">
+    <div *ngFor="let image of images" class="carousel-item">
+      <img [src]="image" [alt]="'Carousel Image'+ image" />
+    </div>
+  </div>
+
+  
+  <button class="carousel-button prev" (click)="prevSlide()">&#9664;</button>
+
+  
+  <button class="carousel-button next" (click)="nextSlide()">&#9654;</button> 
+</div>-->
+<div class="p-2">
+  <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" [circular]="true" autoplayInterval="3000">
+    <ng-template let-product #item>
+      <div>
+        <div class="mb-4">
+          <div class="relative mx-auto">
+            <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name"
+              class="w-full rounded-border" />
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

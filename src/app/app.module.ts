@@ -13,13 +13,38 @@ import { AvatarModule } from 'primeng/avatar';
 import { InputTextModule } from 'primeng/inputtext';
 import { Ripple } from 'primeng/ripple';
 import { MegaMenu } from 'primeng/megamenu';
+import { Carousel } from 'primeng/carousel';
+import { Tag } from 'primeng/tag';
+import { Image, ImageModule } from 'primeng/image';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { AboutComponent } from './components/about/about.component';
+import { LoaderComponent } from './components/loader/loader.component';
+import { OurTeamComponent } from './components/our-team/our-team.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent,
+    NavbarComponent,
+    LandingPageComponent,
+    AboutComponent,
+    LoaderComponent,
+    OurTeamComponent,
+    CarouselComponent,
+    ContactUsComponent
   ],
   imports: [
     MegaMenu,
+    Carousel,
+    Tag,
+    Image,
+    ImageModule,
     BadgeModule, AvatarModule, InputTextModule, Ripple, CommonModule,
     Menubar,
     MenubarModule,
@@ -28,7 +53,9 @@ import { MegaMenu } from 'primeng/megamenu';
     BrowserAnimationsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

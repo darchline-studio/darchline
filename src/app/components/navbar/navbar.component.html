@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="#">
+    <img src="./darchline.jpg" alt="Company Logo" style="height: 75px;width: 75px;border-radius: 20px;">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item dropdown first" [class.show]="isFirstDropdownOpen">
+        <a class="nav-link dropdown-toggle" href="#" (click)="toggleDropdown($event, 'first')" role="button"
+          aria-expanded="false">
+          Services
+        </a>
+        <ul class="dropdown-menu" [class.show]="isFirstDropdownOpen">
+          <li><a class="dropdown-item" href="#">Architecture Design</a></li>
+          <li><a class="dropdown-item" href="#">Interior Design</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown second" [class.show]="isSecondDropdownOpen">
+        <a class="nav-link dropdown-toggle" href="#" (click)="toggleDropdown($event, 'second')" role="button"
+          aria-expanded="false">
+          Architecture
+        </a>
+        <ul class="dropdown-menu" [class.show]="isSecondDropdownOpen">
+          <li><a class="dropdown-item" href="#">Apartment</a></li>
+          <li><a class="dropdown-item" href="#">Commercial</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact-us">Contact Us</a>
+      </li>
+      <li class="nav-item dropdown second" [class.show]="isThirdDropdownOpen">
+        <a class="nav-link dropdown-toggle" href="#" (click)="toggleDropdown($event, 'third')" role="button"
+          aria-expanded="false">
+          About Us
+        </a>
+        <ul class="dropdown-menu" [class.show]="isThirdDropdownOpen">
+          <li><a class="dropdown-item" routerLink="/about">About</a></li>
+          <li><a class="dropdown-item" routerLink="/our-team">Our Team</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

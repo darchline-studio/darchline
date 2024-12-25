@@ -1,0 +1,35 @@
+.p-image-toolbar {
+    position: absolute;
+    inset-block-start: var(--p-image-toolbar-position-top);
+    inset-inline-end: var(--p-image-toolbar-position-right);
+    inset-inline-start: var(--p-image-toolbar-position-left);
+    inset-block-end: var(--p-image-toolbar-position-bottom);
+    display: flex;
+    z-index: 1;
+    padding: var(--p-image-toolbar-padding);
+    background: var(--p-image-toolbar-background);
+    backdrop-filter: blur(var(--p-image-toolbar-blur));
+    border-color: var(--p-image-toolbar-border-color);
+    border-style: solid;
+    border-width: var(--p-image-toolbar-border-width);
+    border-radius: var(--p-image-toolbar-border-radius);
+    gap: var(--p-image-toolbar-gap);
+}
+.p-image-preview-mask {
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border: 0 none;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    color: var(--p-image-preview-mask-color);
+    transition: background var(--p-image-transition-duration);
+}
