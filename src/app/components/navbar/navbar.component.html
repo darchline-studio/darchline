@@ -17,8 +17,8 @@
           Services
         </a>
         <ul class="dropdown-menu" [class.show]="isFirstDropdownOpen">
-          <li><a class="dropdown-item" href="#">Architecture Design</a></li>
-          <li><a class="dropdown-item" href="#">Interior Design</a></li>
+          <li><a class="dropdown-item" routerLink="/apartment">Architecture Design</a></li>
+          <li><a class="dropdown-item" routerLink="/apartment">Interior Design</a></li>
         </ul>
       </li>
       <li class="nav-item dropdown second" [class.show]="isSecondDropdownOpen">
@@ -27,8 +27,8 @@
           Architecture
         </a>
         <ul class="dropdown-menu" [class.show]="isSecondDropdownOpen">
-          <li><a class="dropdown-item" href="#">Apartment</a></li>
-          <li><a class="dropdown-item" href="#">Commercial</a></li>
+          <li><a class="dropdown-item" routerLink="/apartment">Apartment</a></li>
+          <li><a class="dropdown-item" routerLink="/commercial">Commercial</a></li>
         </ul>
       </li>
       <li class="nav-item">

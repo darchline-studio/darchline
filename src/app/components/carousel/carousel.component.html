@@ -12,17 +12,25 @@
   
   <button class="carousel-button next" (click)="nextSlide()">&#9654;</button> 
 </div>-->
-<div class="p-2">
-  <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" [circular]="true" autoplayInterval="3000">
+<div class="p-3">
+  <p-carousel [value]="listOfImages" [numVisible]="2" [numScroll]="1" [circular]="false" autoplayInterval="3000">
     <ng-template let-product #item>
+      <div>
+        <p-image [src]="product.image" [alt]="product.title" [preview]="false" />
+      </div>
+    </ng-template>
+  </p-carousel>
+  <!-- <p-carousel [value]="images" [numVisible]="1" [numScroll]="1" [circular]="true" autoplayInterval="3000">
+    <ng-template let-image #item>
       <div>
         <div class="mb-4">
           <div class="relative mx-auto">
-            <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name"
+            <img [src]="image" [alt]="image"
               class="w-full rounded-border" />
           </div>
         </div>
       </div>
     </ng-template>
-  </p-carousel>
+  </p-carousel> -->
+
 </div>

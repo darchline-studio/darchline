@@ -25,6 +25,8 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { OurTeamComponent } from './components/our-team/our-team.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { ApartmentComponent } from './components/apartment/apartment.component';
+import { CommercialComponent } from './components/commercial/commercial.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     LoaderComponent,
     OurTeamComponent,
     CarouselComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ApartmentComponent,
+    CommercialComponent
   ],
   imports: [
     MegaMenu,
